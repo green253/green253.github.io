@@ -1,3 +1,9 @@
+html *
+{
+   font-size: 1em !important;
+   color: #000 !important;
+   font-family: Arial !important;
+}
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -78,6 +84,10 @@
     border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
+}
+
+#form-field{
+display:block;
 }
 /* */
 
