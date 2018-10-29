@@ -27,3 +27,16 @@
     padding: 20px;
   border-style: solid;
 }
+.search-flex-container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
+.column{
+	-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: green;
+    padding: 20px;
+  border-style: solid;
+}
