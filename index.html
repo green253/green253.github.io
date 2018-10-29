@@ -3,11 +3,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WareBnB</title>
 <link rel = "stylesheet"
    type = "text/css"
-   href = "styles.css" />			    
+   href = "styles.css" />	
+   
 </head>
 <body>
 <div id="main">
@@ -20,7 +21,7 @@
 <div class="flex-container">
         <div class="create">
           <h3> Create an Account</h3>
-          <form action="#">
+          <form action="action_page.php" target="_blank">
             First name:<br>
             <input type="text" name="firstname" placeholder="Enter First Name" required>
             <br>
@@ -76,8 +77,10 @@
 			<input type="date" name="startdate">
             <br>
 			Minimum Star Rating:<br>
-            <input type="text" name="minRating" value="">
-            <br><br>
+            <div class="slidecontainer">
+			<input type="range" min="0" max="2000" value="1000" class="slider" id="myRange">
+			<p>Value: <span id="demo"></span></p>
+			</div>
 			Type of Storage Provided:<br>
             <input type="text" name="firstname" value="">
             <br><br>
@@ -87,8 +90,11 @@
 			<input type="date" name="enddate">
             <br><br>
 			Minimum Price:<br>
-            <input type="range" name="minprice" min="0" max="20,000">
-            <br><br>
+            <div class="slidecontainer">
+			<input type="range" min="0" max="2000" value="1000" class="slider" id="myRange">
+			<p>Value: <span id="demo"></span></p>
+			</div>
+			<br>
 			Maximum Price:<br>
             <input type="range" name="maxprice" min="0" max="20,000">
             <br><br>
@@ -113,4 +119,13 @@
         </div>
     </div>
 </div>
+<script>
+slider = document.getElementById("myRange");
+output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
 </body></html>
