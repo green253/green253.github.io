@@ -1,0 +1,29 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
+.create {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+  border-style: solid;
+}
+.search {
+  -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background: #ccc;
+    padding: 20px;
+  border-style: solid;
+}
+.notes{
+  -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background: #ccc;
+    padding: 20px;
+  border-style: solid;
+}
