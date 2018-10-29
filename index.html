@@ -37,7 +37,7 @@
             <input type="text" name="passwordCheck" value="">
             <br>
             Email:<br>
-            <input type="text" name="email" value="">
+            <input type="email" name="email" value="">
             <br>
             Phone Number:<br>
             <input type="text" name="phone" value="">
@@ -63,7 +63,7 @@
 				<option value="over20miles">20+ miles</option>
 			</select>
 			Size of Storage:<br>
-			select name="SizeStorage">
+			<select name="SizeStorage">
 				<option value="500sqft">500 sqft</option>
 				<option value="1000sqft">1000 sqft</option>
 				<option value="1500sqft">1500 sqft</option>
@@ -73,7 +73,7 @@
 		  </div>
 		  <div class="column">
 		  Start Date:<br>
-            <input type="text" name="firstname" value="">
+			<input type="date" name="startdate">
             <br>
 			Minimum Star Rating:<br>
             <input type="text" name="firstname" value="">
@@ -84,13 +84,13 @@
 		  </div>
 		  <div class="column">
 		  End Date:<br>
-            <input type="text" name="firstname" value="">
+			<input type="date" name="enddate">
             <br><br>
-			Preferred Price:<br>
-            <input type="text" name="firstname" value="">
+			Minimum Price:<br>
+            <input type="range" name="minprice" min="0" max="20,000">
             <br><br>
-			Within how much Price:<br>
-            <input type="text" name="firstname" value="">
+			Maximum Price:<br>
+            <input type="range" name="maxprice" min="0" max="20,000">
             <br><br>
 			Type of Security Provided:<br>
             <input type="text" name="firstname" value="">
@@ -101,6 +101,9 @@
      </div>
   <div class="notes">
           <h3> Additional Notes</h3>
+		  <textarea name="notes" rows="10" cols="30">
+		  Enter any additional notes.</textarea>
+			<br>
         </div>
   
          
