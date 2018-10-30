@@ -10,5 +10,67 @@
    
 </head>
 <body>
+<div id="main">
+   <div class="container">
+	   <div id="header">
+		   <div id="logo">
+    		   <h1>WareBnb</h1>
+		   </div> 		
+        </div>
+        <div class="create">
+          <h1> Create an Account</h1>
+          <form action="action_page.php" target="_blank">
+		  <div class="form-field"><label for="first_name">First Name *</label>
+		  <input class="required" type="text" name="first_name" value=""><p></p>
+		  </div>
+		  <div class="form-field"><label for="last_name">Last Name *</label>
+		  <input class="required" type="text" name="last_name" value=""><p></p>
+		  </div>
+		  <div class="form-field"><label for="email">Email *</label>
+		  <input class="required" type="text" name="email" value=""><p></p>
+		  </div>
+		  <div class="form-field"><label for="password">Password *</label>
+		  <input class="required" type="password" name="password" value=""><p></p>
+		  </div>
+		  <div class="form-field"><label for="password_check">Confirm Password *</label>
+		  <input class="required" type="password" name="password_check" value=""><p></p>
+		  </div>
+		  <div class="form-field"><label for="phone_number">Phone Number *</label>
+		  <input class="required" type="text" name="phone_number" value=""><p></p>
+		  </div>
+		  <div class="form-field">
+		  <label for="role"> Role *</label><br>
+		  <select onchange="clientOwnercheck(this);">
+		  <option value="Select"> Select</option>
+		  <option value="Client"> Client </option>
+		  <option value="warehouse_owner">Warehouse Owner</option>
+		  </select><p></p>
+		  <div id="clientYes" style="display: none;">
+		  <label for="credit_number"> Credit Card Number </label> 
+		  <input type="text" name="credit_number">
+		  </div><p></p>
+		  <div id="ownerYes" style="display: none;">
+		  <label for="bank_account"> Bank Account </label> 
+		  <input type="text" name="bank_account">
+		  </div>
+		  </form>
+        </div>
+		</div>
+		</div>
+		<script>
+		function clientOwnercheck(that) {
+        if (that.value == "Client") {
+            document.getElementById("clientYes").style.display = "block";
+        } 
+		else if(that.value == "warehouse_owner"){
+            document.getElementById("ownerYes").style.display = "block";
+			document.getElementById("clientYes").style.display = "none";
+        }
+		else{
+		document.getElementById("ownerYes").style.display = "none";
+		document.getElementById("clientYes").style.display = "none";
+		}
+    }
+</script>
 
-/body></html>
+</body></html>
