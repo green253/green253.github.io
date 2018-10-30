@@ -26,9 +26,9 @@ html *
   border-style: solid;
 }
 .notes{
-  -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
+  -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     background: #ccc;
     padding: 20px;
   border-style: solid;
@@ -43,6 +43,9 @@ html *
     -ms-flex: 1;
     flex: 1;
     padding: 20px;
+}
+label {
+	white-space: nowrap;
 }
 /* https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 
