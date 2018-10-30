@@ -18,38 +18,15 @@
     		   <h1>WareBnb</h1>
 		   </div> 		
         </div>
-<div class="flex-container">
-        <div class="create">
-          <h1> Create an Account</h1>
-          <form action="action_page.php" target="_blank">
-		  <div class="form-field"><label for="first_name">First Name *</label>
-		  <input class="required" type="text" name="first_name" value=""><p></p>
-		  </div>
-		  <div class="form-field"><label for="last_name">Last Name *</label>
-		  <input class="required" type="text" name="last_name" value=""><p></p>
-		  </div>
-		  <div class="form-field"><label for="email">Email *</label>
-		  <input class="required" type="text" name="email" value=""><p></p>
-		  </div>
-		  <div class="form-field"><label for="password">Password *</label>
-		  <input class="required" type="password" name="password" value=""><p></p>
-		  </div>
-		  <div class="form-field"><label for="password_check">Confirm Password *</label>
-		  <input class="required" type="password" name="password_check" value=""><p></p>
-		  </div>
-		  <div class="form-field"><label for="phone_number">Phone Number *</label>
-		  <input class="required" type="text" name="phone_number" value=""><p></p>
-		  </div>
-        </div>
-		
+<div class="flex-container">		
         <div class="search">
           <h1> Warehouse Search Criteria</h1>
+		  <form action="action_page.php" target="_blank">
 		  <div class="search-flex-container">
 		  <div class="column">
 		  <div class="form-field"><label for="warehouse_name">Warehouse Name *</label>
 		  <input class="required" type="text" name="warehouse_name" value=""><p></p>
 		  </div>
-		  
 		  <div class="form-field">
 		  <label for="location">Location *</label>
 		  <select name="location">
@@ -67,6 +44,18 @@
 		  <div class="form-field">
 		  <label for="size_storage">Size of Storage *</label>
 		  <input class="required" type="text" name="size_storage" value=""><p></p>
+		  </div>
+		  <div class="form-field">
+		  <label for="condition">Condition of Warehouse *</label>
+		  <select name="condition">
+		  <option value="very_poor"> Very Poor </option>
+		  <option value="poor"> Poor </option>
+		  <option value="average"> Average </option>
+		  <option value="good"> Good </option>
+		  <option value="very_good"> Very Good </option>
+		  </select></div><p></p>
+		  <div class="form-field"><label for="year_built">Year Built (----) *</label>
+		  <input class="required" type="text" name="year_built" value=""><p></p>
 		  </div>
 		  </div>
 		  <div class="column">
@@ -117,16 +106,18 @@
 		  </div>
 		  </div>
 		</div>
+		</form>
         </div>
      </div>
-  <div class="notes">
+	 
+  <!-- <div class="notes">
           <h3> Additional Notes</h3>
 		  <textarea name="notes" rows="10" cols="30">
 		  Enter any additional notes.</textarea>
 			<br>
 			<input type="submit" value="Submit">
            </form>
-        </div>
+        </div> -->
 
          
    <div id="footer">
