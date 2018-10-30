@@ -3,12 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WareBnB</title>
+  <title>Login</title>
 <link rel = "stylesheet"
    type = "text/css"
    href = "styles.css" />	
    
 </head>
 <body>
+<div id="main">
+   <div class="container">
+	   <div id="header">
+		   <div id="logo">
+    		   <h1>WareBnb</h1>
+		   </div> 		
+        </div>
+		<div class="login">
+<h1>Login</h1>
 
-/body></html>
+<!-- https://www.w3schools.com/howto/howto_css_login_form.asp -->
+<form action="/action_page.php">
+  
+
+  <div>
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required><p></p>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required><p></p>   
+    <button type="submit" >Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div><p></p>
+
+  <div>
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+  </div>
+</form>
+
+</body></html>
