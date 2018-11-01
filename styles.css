@@ -55,13 +55,25 @@ html *
 label {
 	white-space: nowrap;
 }
-/* https://www.w3schools.com/howto/howto_js_rangeslider.asp */
-
+/* */
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
 
 #form-field{
 display:block;
 }
-/* */
 
 @media screen and (max-width: 300px) {
     span.psw {
