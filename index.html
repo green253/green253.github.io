@@ -90,7 +90,7 @@
 			<input type="checkbox" class="required" name="storage" id="storage" value="electrical">Electrical
 			<input type="checkbox" class="required" name="storage" id="storage" value="nuclear">Nuclear
 		  </div><p></p>
-		  <input type="button" name="warehouse_submit" value="Submit" onclick="warehouse_submit();">
+		  <input type="submit" name="warehouse_submit" value="Submit" onClick="warehouseSubmit();">
 		  </div>
 		</div>
 		</form>
@@ -103,12 +103,13 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
-function warehouse_submit()
+function warehouseSubmit()
 {
 var xmlhttp;
 xmlhttp= new XMLHttpRequest();
-xmlhttp.open("GET", "insert.php?warehouse_name="+document.getElementById("warehouse_name").value+"&location="+document.getElementById("location").value+"&size_storage="+document.getElementById("size_storage").value+"&conditions="+document.getElementById("conditions").value+"&year_built="+document.getElementById("year_built").value+"&start_date="+document.getElementById("start_date").value+"&end_date="+document.getElementById("end_date").value+"&price="+document.getElementById("price").value+"&security="+document.getElementById("security").value+"&storage="+document.getElementById("storage").value,false);
+xmlhttp.open("GET", "insertData.php?warehouse_name="+document.getElementById("warehouse_name").value+"&location="+document.getElementById("location").value+"&size_storage="+document.getElementById("size_storage").value+"&conditions="+document.getElementById("conditions").value+"&year_built="+document.getElementById("year_built").value+"&start_date="+document.getElementById("start_date").value+"&end_date="+document.getElementById("end_date").value+"&price="+document.getElementById("price").value+"&security="+document.getElementById("security").value+"&storage="+document.getElementById("storage").value,false);
 xmlhttp.send(null);
 }
 </script>
