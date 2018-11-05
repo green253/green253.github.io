@@ -16,7 +16,7 @@ $price=$_GET["price"];
 $security=$_GET["security"];
 $storage=$_GET["storage"];
 
-$conn = mysql_connect("mydb.ics.purdue.edu","green253","green253","Classof2015");
+$conn = mysql_connect("mydb.ics.purdue.edu","green253","Classof2015");
 mysql_select_db("WareReg");
 mysql_query("insert into WareReg values('$warehouse_name','$location', '$size_storage', '$conditions', '$year_built','$start_date','$end_date','$price','$security','$storage')");
 
