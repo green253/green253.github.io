@@ -4,8 +4,26 @@ html *
    color: #000 !important;
    font-family: Arial !important;
 }
+#logomain {
+    max-width: 20%;
+	height:auto;
+	float: left;
+	padding: 20px;
+	
+}
+.header {
+	display: inline;
+	background: #ccc;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+.header p{
+	float: right;
+	padding: 20px;
+}
 .flex-container {
   display: flex;
+	float: left;
   flex-direction: row;
   align-content: space-around;
 }
@@ -69,6 +87,9 @@ label {
 .rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;
+}
+.footer{
+	float:left;
 }
 
 #form-field{
