@@ -1,15 +1,1 @@
-//heading
-<ul>
-  <li><a href="">Home</a></li>
-  <li><a href="">Services</a></li>
-  <li><a href="">Register Warehouse</a></li>
-  <li><a href="">Login</a></li>
-</ul>
-
-//formatting on CSS file
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
+This attachment was removed because it contains data that could pose a security risk.
