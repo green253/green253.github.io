@@ -5,38 +5,30 @@
 </head>
 <body>
 <?php
-$warehouse_name=$_POST['warehouse_name'];
-$location=$_POST['location'];
-$size_storage=$_POST['size_storage'];
-$conditions=$_POST['conditions'];
-$year_built=$_POST['year_built'];
-$start_date=$_POST['start_date'];
-$end_date=$_POST['end_date'];
-$price=$_POST['price'];
-$security=$_POST['security'];
-$storage=$_POST['storage'];
 
-define('DB_NAME', 'green253');
-define('DB_USER', 'green253');
-define('DB_PASSWORD', 'Classof2015');
-define('DB_HOST', 'mydb.ics.purdue.edu');
+$servername = "mydb.itap.purdue.edu";
+$username = "green253";
+$password = "Classof2015";
+$dbname = "green253";
 
-$link = mysql_connect(DB_HOST,DB_USER,DB_PASSWORD);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if(!link){
-	die('Could not connect: ' . mysql_error());
-}
-$db_selected = mysql_select_db(DB_NAME, $link);
-if (!$db_selected){
-	die('Can\'t use ' .DB_NAME . ':'.mysql_error());
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+	
+$sql="INSERT INTO WareReg (warehouse_name, location, size_storage, conditions, year_built, start_date, end_date, warehouse_price, security, storage) VALUES('$_POST[warehouse_name]','$_POST[location]', '$_POST[size_storage]','$_POST[conditions]','$_POST[year_built]','$_POST[start_date]','$_POST[end_date]','$_POST[warehouse_price]','$_POST[security]','$_POST[storage]')";
+	
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-
-$sql = "INSERT INTO WareReg values('$warehouse_name','$location', '$size_storage', '$conditions', '$year_built','$start_date','$end_date','$price','$security','$storage')");
-if(!mysql_query($sql)){
-	die('Error: ' .mysql_error());
-}
-mysql_close();
+$conn->close();
 ?>
 
 </body>
